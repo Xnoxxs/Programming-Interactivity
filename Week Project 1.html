@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Friday!</title>
+    <style>
+        /* Reset margins and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* General background color for the body */
+        body {
+            background-color: #f8f8f8;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #ff6f3c;
+            color: white;
+            padding: 40px; /* Increased padding for larger header */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Header title styling */
+        .header h1 {
+            margin-left: 30px;
+            flex: 1;
+            font-size: 48px; /* Larger font size for the title */
+        }
+
+        /* Wrapper for the navigation and lightbulb image */
+        .nav-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 30px;
+        }
+
+        /* Navigation links styling */
+        .nav {
+            display: flex;
+            gap: 25px; /* Increase gap between links */
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px; /* Larger font size for links */
+        }
+
+        /* Lightbulb image */
+        .lightbulb {
+            width: 80px;
+            height: 80px;
+            margin-top: 15px;
+        }
+
+        /* Grid layout for the shopping items */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 40px; /* Increased gap between boxes */
+            margin: 60px;
+        }
+
+        /* Styling for individual item boxes */
+        .box {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background-color: white;
+            padding: 30px; /* Larger padding inside each box */
+            gap: 25px; /* Increased space between image and text */
+        }
+
+        /* Image styling */
+        .item-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px; /* Slightly larger border radius */
+        }
+
+        /* Item details section */
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        /* Item name and price */
+        .item-name {
+            font-size: 28px; /* Larger font for item names */
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 24px; /* Larger font for prices */
+            color: #ff6f3c;
+        }
+
+        /* Add to cart button */
+        .add-to-cart {
+            padding: 15px 30px; /* Larger button padding */
+            background-color: #ff6f3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px; /* Larger font for button text */
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .add-to-cart:hover {
+            background-color: #e65a2e;
+        }
+
+        /* Long text section styling */
+        .long-text {
+            margin: 60px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px; /* Larger footer padding */
+            background-color: #f1f1f1;
+            margin-top: 60px;
+            font-size: 20px; /* Larger font for footer text */
+        }
+
+        /* Responsive layout for tablets */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr; /* Switch to single column */
+            }
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 480px) {
+            .box {
+                padding: 15px; /* Reduced padding for smaller screens */
+            }
+
+            .item-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .add-to-cart {
+                padding: 12px 20px;
+                font-size: 18px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .nav a {
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <h1>Happy Friday!</h1>
+        <div class="nav-wrapper">
+            <div class="nav">
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+            </div>
+            <img src="Shopping Cart.png" alt="Lightbulb" class="lightbulb">
+        </div>
+    </header>
+
+    <!-- Grid of shopping items -->
+    <section class="content-grid">
+        <!-- Item 1 -->
+        <div class="box">
+            <img src="T-shirt.png" alt="T-Shirt" class="item-image">
+            <div class="item-details">
+                <div class="item-name">T-Shirt</div>
+                <div class="price">$19.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="box">
+            <img src="Sneakers.png" alt="Sneakers" class="item-image">
+            <div class="item-details">
+                <div class="item-name">Sneakers</div>
+                <div class="price">$49.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="box">
+            <img src="BackPack.png" alt="Backpack" class="item-image">
+            <div class="item-details">
+                <div class="item-name">Backpack</div>
+                <div class="price">$29.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="box">
+            <img src="Sunglasses.png" alt="Sunglasses" class="item-image">
+            <div class="item-details">
+                <div class="item-name">Sunglasses</div>
+                <div class="price">$15.99</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Long text section -->
+    <section class="long-text">
+        <p>
+            Welcome to our amazing store! Here, you will find the best deals on trendy clothes, shoes, backpacks, and accessories. 
+            Whether you're looking for a casual T-shirt, the perfect pair of sneakers, or a stylish pair of sunglasses, 
+            we have everything you need to upgrade your wardrobe. Our collection is carefully curated to offer the best 
+            quality at the most affordable prices. Shop now and enjoy fast shipping and hassle-free returns. 
+            We are committed to making your shopping experience as enjoyable as possible.
+        </p>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>Created by Hamza</p>
+    </footer>
+</body>
+</html>

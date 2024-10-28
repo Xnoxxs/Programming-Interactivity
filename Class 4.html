@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffad66, #ff7733);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: left;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .divider {
+      height: 2px;
+      background-color: black;
+      margin: 10px 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      border: 2px solid black;
+    }
+
+    footer {
+      text-align: left;
+      padding: 10px 20px;
+      font-size: 24px; 
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      footer {
+        font-size: 20px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Page Title</h1>
+  </header>
+
+  <div class="divider"></div>
+
+  <main class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </main>
+
+  <div class="divider"></div>
+
+  <footer>
+    <p>Created by Hamza</p>
+  </footer>
+</body>
+</html>

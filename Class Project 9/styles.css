@@ -1,0 +1,111 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Nav Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f1c4a0; /* Adjust color as needed */
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Section Styles */
+.page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(100px) scale(0.9) rotate(5deg); /* More dramatic initial transform */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+#first { background-color: #f2e1c2; }
+#second { background-color: #fff; }
+#third { background-color: #f2e1c2; }
+#fourth { background-color: #fff; }
+
+/* Enhanced Animation when section is in view */
+.page.active {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0); /* Brings section back to normal */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth exit transition */
+}
+
+/* Page Title in Top Left with Consistent Margin */
+.page-title {
+    position: absolute;
+    top: 150px; 
+    left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: translateX(-20px); /* Slide in only from the left */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+.page.active .page-title {
+    opacity: 1;
+    transform: translateX(0); /* Slide to normal horizontal position */
+    transition-delay: 0.3s; /* Slight delay for layered effect */
+}
+
+
+/* Button Style */
+button {
+    padding: 10px 20px;
+    background-color: #f1c4a0;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add a hover animation */
+}
+
+button:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Styles for Bubble Tea Image */
+.bubble-tea-image {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    margin-top: 20px; /* Optional: add spacing from the title */
+}
+
+/* Styles for Question Mark */
+.question-mark {
+    font-size: 10em; /* Large size for impact */
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: scale(0.5) rotate(-20deg); /* Initial small size with rotation */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition */
+}
+
+/* Animate question mark when active */
+.page.active .question-mark {
+    opacity: 1;
+    transform: scale(1) rotate(0); /* Grow to full size and rotate back to normal */
+    transition-delay: 0.4s; /* Add a slight delay for extra effect */
+}
